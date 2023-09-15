@@ -9,6 +9,11 @@ clear = lambda: os.system('cls')
 MenuSelect = 1
 
 clear()
+print("\n\n                       [red bold]ВНИМАНИЕ!!!\n")
+print("Это просто тупая консольная игра, думаю дисклеймер к ней не нужен.\n         Переключатся на \"w, s, a, d\" выбрать \"e\"")
+time.sleep(8)
+
+clear()
 time.sleep(0.1)
 print("\n\n       [grey74 bold]The[bold light_goldenrod1]Stypid[bold deep_pink1]Console[bold violet]Game\n\n[chartreuse1]          > Новая игра\n[pale_turquoise1]            Продолжить\n[pale_turquoise1]            Настройки")
 while True:
