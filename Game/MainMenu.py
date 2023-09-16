@@ -2,7 +2,7 @@ import time
 from rich import print
 import keyboard
 import os
-import Harter_1.Some1
+import Harter_1.Some1 # это такой тупой импорт из за бага
 
 clear = lambda: os.system('cls')
 
@@ -17,7 +17,7 @@ clear()
 time.sleep(0.1)
 print("\n\n       [grey74 bold]The[bold light_goldenrod1]Stypid[bold deep_pink1]Console[bold violet]Game\n\n[chartreuse1]          > Новая игра\n[pale_turquoise1]            Продолжить\n[pale_turquoise1]            Настройки")
 while True:
-    time.sleep(0.1)
+    time.sleep(0.1) # это чтобы как бы цикл работал с задержкой и небыло бага + нагрева компа, попрошу тебя делать так же
     if keyboard.is_pressed('s') and MenuSelect == 1:
         time.sleep(0.1)
         clear()
@@ -42,7 +42,7 @@ while True:
         Harter_1.Some1.NewGame()
         break
     elif keyboard.is_pressed('e') and MenuSelect == 2:
-        ()
+        () # тут и ниже запуск настроек и продолжить лол
         break
     elif keyboard.is_pressed('e') and MenuSelect == 3:
         ()
