@@ -131,12 +131,12 @@ def Var1():
         elif keyboard.is_pressed('e') and Sel == 1:
             time.sleep(0.1)
             clear()
-            VarOnPol1()
+            VarOnPolice1()
             break
         elif keyboard.is_pressed('e') and Sel == 2:
             time.sleep(0.1)
             clear()
-            VarOnPol2()
+            VarOnPolice2()
             break
     
 def gamepl1():
@@ -188,4 +188,3 @@ def gamepl1():
             Var1()
             break
     
-gamepl1()

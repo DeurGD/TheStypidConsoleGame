@@ -2,7 +2,7 @@ import time
 from rich import print
 import keyboard
 import os
-from Harter_1.Some2 import *
+from Harter_1.Harter1GamePlay2 import *
 
 clear = lambda: os.system('cls')
 
