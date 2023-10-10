@@ -2,8 +2,8 @@ import time
 from rich import print
 import keyboard
 import os
-import Harter_1.Harter1GamePlay1
 import pickle
+from HarterOne.GamePlay1 import NewGame
 
 clear = lambda: os.system('cls')
 
@@ -11,11 +11,17 @@ clear()
 
 MenuSelect = 1
 
+def LocalNewGame():
+    Save = 0
+    with open('Save.sav', 'wb') as f:
+        pickle.dump(Save, f)
+    NewGame()
+
 def CheckUserAge():
     clear()
     try:
         UserAge = int(input("\n\n       Сколько тебе лет: "))
-        if UserAge < 18:
+        if UserAge < 18 and UserAge > 1:
             clear()
             print("[red bold]\n\n       Тебе нет 18, а эта игра строго 18+")
             time.sleep(3)
@@ -90,10 +96,10 @@ while True:
         print("\n\n       [grey74 bold]The[bold light_goldenrod1]Stypid[bold deep_pink1]Console[bold violet]Game\n\n[grey50]            Новая игра\n[light_slate_blue]          ➮ Продолжить\n[grey50]            Настройки")
         MenuSelect = 2
     elif keyboard.is_pressed('e') and MenuSelect == 1:
-        Harter_1.Some1.NewGame()
+        LocalNewGame()
         break
     elif keyboard.is_pressed('e') and MenuSelect == 2:
-        () # тут и ниже запуск настроек и продолжить лол
+        ()
         break
     elif keyboard.is_pressed('e') and MenuSelect == 3:
         ()

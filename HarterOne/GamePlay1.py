@@ -2,13 +2,17 @@ import time
 from rich import print
 import keyboard
 import os
-from Harter_1.Harter1GamePlay2 import *
+import pickle
 
 clear = lambda: os.system('cls')
 
-Sel1 = 1
+Select = 1
+Save = 0
 
-def Var1():
+with open('UserSave.sav', 'wb') as f:
+        pickle.dump(Save, f)
+
+def Variant1():
     print("\n\n        [b]Разраб: ", end="")
     print("[light_cyan1]О ебать, давно тут некого небыло...")
     time.sleep(3)
@@ -35,7 +39,7 @@ def Var1():
     clear()
     gamepl1()
     
-def Var2():
+def Variant2():
     print("\n\n        [b]Разраб: ", end="")
     print("[light_cyan1]О ебать, давно тут некого небыло...")
     time.sleep(3)
@@ -64,7 +68,7 @@ def Var2():
     
 
 def NewGame():
-    Sel1 = 1
+    Select = 1
     clear()
     time.sleep(0.5)
     print("\n\n        [b]Некто: ", end="")
@@ -80,20 +84,20 @@ def NewGame():
             clear()
             print("\n\n        [b]Некто: ", end="")
             print("[grey35]эй сдесь есть кто нибуть?\n\n\n[bold][default]            Я сдесь[light_sky_blue1]     > Иди нахуй")
-            Sel1 = 2
+            Select = 2
         elif keyboard.is_pressed('a'):
             time.sleep(0.1)
             clear()
             print("\n\n        [b]Некто: ", end="")
             print("[grey35]эй сдесь есть кто нибуть?\n\n\n[bold][light_sky_blue1]          > Я сдесь[default]       Иди нахуй")
-            Sel1 = 1
-        elif keyboard.is_pressed('e') and Sel1 == 1:
+            Select = 1
+        elif keyboard.is_pressed('e') and Select == 1:
             time.sleep(0.1)
             clear()
-            Var1()
+            Variant1()
             break
-        elif keyboard.is_pressed('e') and Sel1 == 2:
+        elif keyboard.is_pressed('e') and Select == 2:
             time.sleep(0.1)
             clear()
-            Var2()
+            Variant2()
             break
